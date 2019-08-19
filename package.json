@@ -1,0 +1,79 @@
+{
+  "name": "vue-instagram-embed",
+  "version": "1.0.0",
+  "description": "Instagram embed component for vue",
+  "license": "MIT",
+  "main": "dist/vueinstaembed.umd.min.js",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve ./example/main.js --open --mode local",
+    "build:doc": "vue-cli-service build ./example/main.js --dest docs --mode development",
+    "build": "vue-cli-service build --name vueinstaembed --entry ./src/instaEmbed.js --target lib",
+    "lint": "vue-cli-service lint src example",
+    "prepublishOnly": "npm run lint && npm run test:unit && npm run build:doc && npm run build",
+    "test:unit": "vue-cli-service test:unit --coverage",
+    "test:coverage": "vue-cli-service test:unit --coverage --verbose && codecov"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "component"
+  ],
+  "dependencies": {
+    "vue-hljs": "^1.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-plugin-unit-jest": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "codecov": "^3.2.0",
+    "component-fixture": "^0.4.1",
+    "element-ui": "^2.5.4",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.6.8",
+    "vue-cli-plugin-component": "^1.10.5",
+    "vue-good-table": "2.17.4",
+    "vue-server-renderer": "^2.6.8",
+    "vue-template-compiler": "^2.6.8"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/prettier"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "files": [
+    "dist/*.css",
+    "dist/*.map",
+    "dist/*.js",
+    "src/*"
+  ],
+  "module": "dist/vueinstaembed.common.js"
+}
