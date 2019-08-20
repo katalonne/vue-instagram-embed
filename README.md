@@ -9,6 +9,9 @@
 
 Vue component for embedding instagram posts
 
+## Demo
+[Vue Instagram Embed](https://katalonne.github.io/vue-instagram-embed/)
+
 ## Installation
 ```bash
 yarn add vue-instagram-embed
