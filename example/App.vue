@@ -90,7 +90,7 @@ export default {
     return {
       columns: [
         {
-          label: "Propriety",
+          label: "Property",
           field: "name"
         },
         {
