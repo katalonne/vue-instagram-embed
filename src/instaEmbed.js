@@ -20,6 +20,9 @@ export default {
     },
     className: {
       type: String
+    },
+    token: {
+      type: String
     }
   },
   data() {
@@ -41,7 +44,7 @@ export default {
     fetchEmbed() {
       this.validateUrl();
       const maxWidth = this.maxWidth >= 320 ? this.maxWidth : 320
-      const url = `https://api.instagram.com/oembed?url=${this.url}&maxwidth=${maxWidth}&hidecaption=${this.hideCaption}&omitscript=${this.omitScript}`;
+      const url = `https://graph.facebook.com/v8.0/instagram_oembed?url=${this.url}&maxwidth=${maxWidth}&hidecaption=${this.hideCaption}&omitscript=${this.omitScript}&access_token=${this.token}`;
       fetch(url)
         .then(res => {
           if (res.ok) {
