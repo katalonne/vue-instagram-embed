@@ -11,7 +11,7 @@ Vue component for embedding instagram posts
 
 ## Demo
 
-[Vue Instagram Embed](https://lancehunter.github.io/vue-instagram-embed/)
+[Vue Instagram Embed](https://katalonne.github.io/vue-instagram-embed/)
 
 ## Installation
 
@@ -20,6 +20,10 @@ yarn add vue-instagram-embed
 
 npm install --save vue-instagram-embed
 ```
+
+## Preparation
+
+Facebook has updated their requirements to allow access to the oEmbed API for Instagram. You will need to register an application at the [Facebook Developer site](https://developers.facebook.com/), give that application access to the oEmbed API for Instagram, and get your Application ID and Client Secret. You can find more information on this process [here](https://developers.facebooks.com/docs/instagram/oembed/).
 
 ## Usage
 
