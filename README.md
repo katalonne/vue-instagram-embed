@@ -10,9 +10,11 @@
 Vue component for embedding instagram posts
 
 ## Demo
+
 [Vue Instagram Embed](https://katalonne.github.io/vue-instagram-embed/)
 
 ## Installation
+
 ```bash
 yarn add vue-instagram-embed
 
@@ -22,30 +24,34 @@ npm install --save vue-instagram-embed
 ## Usage
 
 ```javascript
-import InstagramEmbed from 'vue-instagram-embed';
+import InstagramEmbed from "vue-instagram-embed";
 
 export default {
   components: {
-    InstagramEmbed
-  }
-}
+    InstagramEmbed,
+  },
+};
 ```
 
 ```html
 <instagram-embed
   :url="'https://www.instagram.com/p/Bs_yHwHBjKo/'"
-  :max-width=500
+  :max-width="500"
+  :appID="{Your registered App ID}"
+  :clientToken="{Your registered app's client token}"
 />
 ```
 
 ## Props
 
 | Property     | Type    | Default |
-|--------------|---------|---------|
+| ------------ | ------- | ------- |
 | url          | String  |         |
 | max-width    | Number  | 320     |
 | class-name   | String  |         |
 | hide-caption | Boolean | false   |
+| appID        | String  |         |
+| clientToken  | String  |         |
 
 ## License
 

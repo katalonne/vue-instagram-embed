@@ -1,5 +1,8 @@
 /* eslint-disable no-console */
 /* eslint-disable prettier/prettier */
+// Updated with some code from
+// https://github.com/kishorgandham/vue-instagram-embed
+// and expanded to separate client token and app ID
 export default {
   name: 'vue-instagram-embed',
   props: {
@@ -19,6 +22,12 @@ export default {
       default: true
     },
     className: {
+      type: String
+    },
+    appID: {
+      type: String
+    },
+    clientToken: {
       type: String
     }
   },
@@ -41,7 +50,7 @@ export default {
     fetchEmbed() {
       this.validateUrl();
       const maxWidth = this.maxWidth >= 320 ? this.maxWidth : 320
-      const url = `https://api.instagram.com/oembed?url=${this.url}&maxwidth=${maxWidth}&hidecaption=${this.hideCaption}&omitscript=${this.omitScript}`;
+      const url = `https://graph.facebook.com/v9.0/instagram_oembed?url=${this.url}&maxwidth=${maxWidth}&hidecaption=${this.hideCaption}&omitscript=${this.omitScript}&access_token=${this.appID}|${this.token}`;
       fetch(url)
         .then(res => {
           if (res.ok) {
@@ -96,7 +105,7 @@ export default {
       });
     }
   },
-  render () {
+  render() {
     return (
       <div class={this.className} domPropsInnerHTML={this.html}></div>
     )

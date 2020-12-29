@@ -2661,6 +2661,9 @@ var es6_number_constructor = __webpack_require__("c5f6");
 /* eslint-disable no-console */
 
 /* eslint-disable prettier/prettier */
+// Updated with some code from
+// https://github.com/kishorgandham/vue-instagram-embed
+// and expanded to separate client token and app ID
 /* harmony default export */ var instaEmbed = ({
   name: 'vue-instagram-embed',
   props: {
@@ -2680,6 +2683,12 @@ var es6_number_constructor = __webpack_require__("c5f6");
       default: true
     },
     className: {
+      type: String
+    },
+    appID: {
+      type: String
+    },
+    clientToken: {
       type: String
     }
   },
@@ -2706,7 +2715,7 @@ var es6_number_constructor = __webpack_require__("c5f6");
 
       this.validateUrl();
       var maxWidth = this.maxWidth >= 320 ? this.maxWidth : 320;
-      var url = "https://api.instagram.com/oembed?url=".concat(this.url, "&maxwidth=").concat(maxWidth, "&hidecaption=").concat(this.hideCaption, "&omitscript=").concat(this.omitScript);
+      var url = "https://graph.facebook.com/v9.0/instagram_oembed?url=".concat(this.url, "&maxwidth=").concat(maxWidth, "&hidecaption=").concat(this.hideCaption, "&omitscript=").concat(this.omitScript, "&access_token=").concat(this.appID, "|").concat(this.token);
       fetch(url).then(function (res) {
         if (res.ok) {
           return res.json();
