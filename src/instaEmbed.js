@@ -24,7 +24,7 @@ export default {
     className: {
       type: String
     },
-    appID: {
+    appId: {
       type: String
     },
     clientToken: {

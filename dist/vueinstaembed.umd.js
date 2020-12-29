@@ -2694,7 +2694,7 @@ var es6_number_constructor = __webpack_require__("c5f6");
     className: {
       type: String
     },
-    appID: {
+    appId: {
       type: String
     },
     clientToken: {
