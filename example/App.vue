@@ -64,6 +64,8 @@
           :url="'https://www.instagram.com/p/Bs_yHwHBjKo/'"
           :max-width="this.width"
           :class-name="'instagram-embed'"
+          :client-token="'38cd60e15b8d7cf1be3e70ee6bfeeb5c'"
+          :appID="'206690097798263'"
         />
       </div>
       <div v-highlight class="usage">
@@ -107,7 +109,9 @@ export default {
         { name: "max-width", type: "Number", default: 320 },
         { name: "class-name", type: "String", default: "" },
         { name: "hide-caption", type: "Boolean", default: false },
-        { name: "omit-script", type: "Boolean", default: true }
+        { name: "omit-script", type: "Boolean", default: true },
+        { name: "client-token", type: "String", default: "" },
+        { name: "appID", type: "String", default: "" }
       ].map((obj, index) => {
         obj.id = index;
         return obj;
@@ -121,6 +125,8 @@ export default {
   :url="'https://www.instagram.com/p/Bs_yHwHBjKo/'"
   :max-width=${this.width}
   :class-name="'instagram-embed'"
+  :client-token="'{Your app's client token}'"
+  :appID="'{Your app's ID}'"
 />
 `;
     }
