@@ -2694,7 +2694,7 @@ var es6_number_constructor = __webpack_require__("c5f6");
     className: {
       type: String
     },
-    appId: {
+    appID: {
       type: String
     },
     clientToken: {
@@ -2724,7 +2724,7 @@ var es6_number_constructor = __webpack_require__("c5f6");
 
       this.validateUrl();
       var maxWidth = this.maxWidth >= 320 ? this.maxWidth : 320;
-      var url = "https://graph.facebook.com/v9.0/instagram_oembed?url=".concat(this.url, "&maxwidth=").concat(maxWidth, "&hidecaption=").concat(this.hideCaption, "&omitscript=").concat(this.omitScript, "&access_token=").concat(this.appId, "|").concat(this.clientToken);
+      var url = "https://graph.facebook.com/v9.0/instagram_oembed?url=".concat(this.url, "&maxwidth=").concat(maxWidth, "&hidecaption=").concat(this.hideCaption, "&omitscript=").concat(this.omitScript, "&access_token=").concat(this.appID, "|").concat(this.clientToken);
       fetch(url).then(function (res) {
         if (res.ok) {
           return res.json();
