@@ -38,7 +38,7 @@ export default {
   :url="'https://www.instagram.com/p/Bs_yHwHBjKo/'"
   :max-width="500"
   :appID="{Your registered App ID}"
-  :clientToken="{Your registered app's client token}"
+  :client-token="{Your registered app's client token}"
 />
 ```
 
