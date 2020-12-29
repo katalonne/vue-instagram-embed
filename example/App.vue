@@ -64,6 +64,8 @@
           :url="'https://www.instagram.com/p/Bs_yHwHBjKo/'"
           :max-width="this.width"
           :class-name="'instagram-embed'"
+          :clientToken="'38cd60e15b8d7cf1be3e70ee6bfeeb5c'"
+          :appID="'206690097798263'"
         />
       </div>
       <div v-highlight class="usage">
@@ -121,8 +123,8 @@ export default {
   :url="'https://www.instagram.com/p/Bs_yHwHBjKo/'"
   :max-width=${this.width}
   :class-name="'instagram-embed'"
-  :clientToken="'38cd60e15b8d7cf1be3e70ee6bfeeb5c'"
-  :appID="'206690097798263'"
+  :clientToken="'{Your app's client token}'"
+  :appID="'{Your app's ID}'"
 />
 `;
     }
