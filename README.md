@@ -51,7 +51,7 @@ export default {
 | class-name   | String  |         |
 | hide-caption | Boolean | false   |
 | appID        | String  |         |
-| clientToken  | String  |         |
+| client-token | String  |         |
 
 ## License
 
