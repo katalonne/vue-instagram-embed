@@ -50,7 +50,7 @@ export default {
     fetchEmbed() {
       this.validateUrl();
       const maxWidth = this.maxWidth >= 320 ? this.maxWidth : 320
-      const url = `https://graph.facebook.com/v9.0/instagram_oembed?url=${this.url}&maxwidth=${maxWidth}&hidecaption=${this.hideCaption}&omitscript=${this.omitScript}&access_token=${this.appID}|${this.clientToken}`;
+      const url = `https://graph.facebook.com/v9.0/instagram_oembed?url=${this.url}&maxwidth=${maxWidth}&hidecaption=${this.hideCaption}&omitscript=${this.omitScript}&access_token=${this.appId}|${this.clientToken}`;
       fetch(url)
         .then(res => {
           if (res.ok) {
