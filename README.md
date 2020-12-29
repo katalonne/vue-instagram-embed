@@ -41,8 +41,8 @@ export default {
 <instagram-embed
   :url="'https://www.instagram.com/p/Bs_yHwHBjKo/'"
   :max-width="500"
-  :appID="{Your registered App ID}"
-  :client-token="{Your registered app's client token}"
+  :appID="'{Your registered App ID}'"
+  :client-token="'{Your registered app's client token}'"
 />
 ```
 
