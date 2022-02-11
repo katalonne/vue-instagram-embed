@@ -39,7 +39,7 @@
     "element-ui": "^2.5.4",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^7.1.0",
     "vue": "^2.6.8",
     "vue-cli-plugin-component": "^1.10.5",
